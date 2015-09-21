@@ -21,9 +21,29 @@ three = {(
          ((160, 50, 31), 'W'),
          ((170, 72, 30), 'M')}
 
+def calc_stats(data_dict):
+    for cl in data_dict.keys():  # for every class
+        for i in range(0, n_dimension):  # for evey feature, ex: age, height, weight etc.
+            li = []
+            values = data_dict[cl]
+            for j in range(0, len(data_dict[cl])):  # for data point
+                li.append(values[j][i])
+
+            mean = sum(li)/len(data_dict[cl])
+            numerator = 0.00
+            denominator = len(data_dict[cl])
+            for k in li:
+                numerator += (abs(k - mean)) ** 2
+
+            ke_mean = str(features[i]) + '_' + 'mean' + '_' + cl
+            ke_sd = str(features[i]) + '_' + 'sd' + '_' + cl
+            data_stats[ke_sd] = math.sqrt(numerator / (denominator-1))
+            data_stats[ke_mean] = mean
+
+
 if __name__ == '__main__':
     data = list(three)
-    print data
+    #print data
     data_dict = {}
     data_stats = {}
     n_dimension = 3
@@ -38,33 +58,10 @@ if __name__ == '__main__':
             data_dict[key] = [list(value)]
     #  Data is now in  data_dict dictionary in desired format
 
-    #  Calculate mean and standard deviation for each feature given class - Calculating the priors
-    for cl in data_dict.keys():  # for every class
-        print cl
-        values = data_dict[cl]
-        for i in range(0, n_dimension):  # for evey feature, ex: age, height, weight etc.
-            li = []
-            values = data_dict[cl]
-            for j in range(0, len(data_dict[cl])):  # for data point
-                li.append(values[j][i])
+    calc_stats(data_dict)  # Calculate mean and standard deviation for each feature given class - Calculating the priors
 
-            print li
-            mean = sum(li)/len(data_dict[cl])
-            print mean
-            numerator = 0.00
-            denominator = len(data_dict[cl])
-            for k in li:
-                numerator += (abs(k - mean)) ** 2
-
-            print numerator
-            print denominator
-
-            ke_mean = str(features[i]) + '_' + 'mean' + '_' + cl
-            ke_sd = str(features[i]) + '_' + 'sd' + '_' + cl
-            data_stats[ke_sd] = math.sqrt(numerator / denominator-1)
-            data_stats[ke_mean] = mean
-
-    print data_stats
+    for key in data_stats.keys():
+        print key, ' : ', data_stats[key]
 
 
 
