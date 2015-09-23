@@ -42,10 +42,53 @@ def calc_stats(data_dict):
 
 
 def formula(d):
-    one = d[0]
+    height = d[0]
+    weight = d[1]
+    age = d[2]
+    features = ['height', 'weight', 'age']
+    classes = ['M', 'W']
+    probability_distributions = []
+    for cl in classes:
+        result = 1
+        nums = []
+        for i in range(0,len(features)):
+            feature = features[i]
+            mean = feature + '_' + 'mean' + '_' + cl
+            sd = feature + '_' + 'sd' + '_' + cl
+            num = 1/math.sqrt(2 * math.pi * data_stats[sd])
+            den = math.e ** (- ((d[i] - data_stats[mean]) ** 2) / (2 * data_stats[mean]))
+            result = num * den
+            nums.append(result)
+            print cl, feature, result
+        print cl, nums
+        prod = 1
+        for val in nums:
+            prod *= val
+        print prod
+
+
+    print probability_distributions
+
+    """
     res = 1/math.sqrt(2 * math.pi * data_stats['height_sd_W'])
-    res1 = math.e ** (- ((one - data_stats['height_mean_W']) ** 2) / (2 * data_stats['height_mean_W']) )
-    return res * res1
+    res1 = math.e ** (- ((height - data_stats['height_mean_W']) ** 2) / (2 * data_stats['height_mean_W']))
+    P_W_Height = res * res1
+
+    res = 1/math.sqrt(2 * math.pi * data_stats['weight_sd_W'])
+    res1 = math.e ** (- ((weight - data_stats['weight_mean_W']) ** 2) / (2 * data_stats['weight_mean_W']))
+    P_W_Weight = res * res1
+
+    res = 1/math.sqrt(2 * math.pi * data_stats['age_sd_W'])
+    res1 = math.e ** (- ((age - data_stats['age_mean_W']) ** 2) / (2 * data_stats['age_mean_W']))
+    P_W_Age = res * res1
+
+    print P_W_Height , P_W_Weight, P_W_Age
+
+    return P_W_Height * P_W_Weight * P_W_Age
+    """
+
+
+
 
 
 if __name__ == '__main__':
@@ -66,10 +109,10 @@ if __name__ == '__main__':
     #  Data is now in  data_dict dictionary in desired format
 
     calc_stats(data_dict)  # Calculate mean and standard deviation for each feature given class - Calculating the priors
-
+    """
     for key in data_stats.keys():
         print key, ' : ', data_stats[key]
-
+    """
     test = (162, 53, 28)
     print formula(test)
 
