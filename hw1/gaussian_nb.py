@@ -41,6 +41,13 @@ def calc_stats(data_dict):
             data_stats[ke_mean] = mean
 
 
+def formula(d):
+    one = d[0]
+    res = 1/math.sqrt(2 * math.pi * data_stats['height_sd_W'])
+    res1 = math.e ** (- ((one - data_stats['height_mean_W']) ** 2) / (2 * data_stats['height_mean_W']) )
+    return res * res1
+
+
 if __name__ == '__main__':
     data = list(three)
     #print data
@@ -62,6 +69,11 @@ if __name__ == '__main__':
 
     for key in data_stats.keys():
         print key, ' : ', data_stats[key]
+
+    test = (162, 53, 28)
+    print formula(test)
+
+
 
 
 
