@@ -6,7 +6,7 @@ import math
 
 
 three = {(
-             (170, 57, 32), 'W'),
+         (170, 57, 32), 'W'),
          ((190, 95, 28), 'M'),
          ((150, 45, 35), 'W'),
          ((168, 65, 29), 'M'),
@@ -42,53 +42,28 @@ def calc_stats(data_dict):
 
 
 def formula(d):
-    height = d[0]
-    weight = d[1]
-    age = d[2]
-    features = ['height', 'weight', 'age']
+    f_s = ['height', 'weight', 'age']
     classes = ['M', 'W']
     probability_distributions = []
     for cl in classes:
         result = 1
         nums = []
-        for i in range(0,len(features)):
-            feature = features[i]
+        for i in range(0, len(f_s)):
+            feature = f_s[i]
             mean = feature + '_' + 'mean' + '_' + cl
             sd = feature + '_' + 'sd' + '_' + cl
             num = 1/math.sqrt(2 * math.pi * data_stats[sd])
             den = math.e ** (- ((d[i] - data_stats[mean]) ** 2) / (2 * data_stats[mean]))
             result = num * den
             nums.append(result)
-            print cl, feature, result
-        print cl, nums
+            print 'p(' + str(feature) + '|' + str(cl) + ')' + '=' + str(result)
+        #print cl, nums
         prod = 1
         for val in nums:
             prod *= val
-        print prod
+        probability_distributions.append(prod)
 
-
-    print probability_distributions
-
-    """
-    res = 1/math.sqrt(2 * math.pi * data_stats['height_sd_W'])
-    res1 = math.e ** (- ((height - data_stats['height_mean_W']) ** 2) / (2 * data_stats['height_mean_W']))
-    P_W_Height = res * res1
-
-    res = 1/math.sqrt(2 * math.pi * data_stats['weight_sd_W'])
-    res1 = math.e ** (- ((weight - data_stats['weight_mean_W']) ** 2) / (2 * data_stats['weight_mean_W']))
-    P_W_Weight = res * res1
-
-    res = 1/math.sqrt(2 * math.pi * data_stats['age_sd_W'])
-    res1 = math.e ** (- ((age - data_stats['age_mean_W']) ** 2) / (2 * data_stats['age_mean_W']))
-    P_W_Age = res * res1
-
-    print P_W_Height , P_W_Weight, P_W_Age
-
-    return P_W_Height * P_W_Weight * P_W_Age
-    """
-
-
-
+    return probability_distributions.index(max(probability_distributions))
 
 
 if __name__ == '__main__':
@@ -97,6 +72,7 @@ if __name__ == '__main__':
     data_dict = {}
     data_stats = {}
     n_dimension = 3
+    cl = ['M', 'W']
     features = ['height', 'weight', 'age']
     #  Below, converting data to desired format for easier calculation
     for obs in data:
@@ -113,8 +89,8 @@ if __name__ == '__main__':
     for key in data_stats.keys():
         print key, ' : ', data_stats[key]
     """
-    test = (162, 53, 28)
-    print formula(test)
+    test = (180, 85, 29)
+    print 'Final class of this data point is: ' + cl[formula(test)]
 
 
 

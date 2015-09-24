@@ -78,7 +78,7 @@ if __name__ == '__main__':
     print 'Input data: ',  data
     dist = []
     final_classes = []
-    knearest(5, (162, 53, 28))
+    knearest(5, (180, 85, 29))
     print 'Cartesian distances from test point ', dist
     print 'Majority of class count from: ', final_classes
     if final_classes.count('M') >= final_classes.count('W'):
