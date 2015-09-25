@@ -21,6 +21,26 @@ three = {(
          ((160, 50, 31), 'W'),
          ((170, 72, 30), 'M')}
 
+
+
+two = {(
+(170, 57), 'W'),
+((190, 95), 'M'),
+((150, 45), 'W'),
+((168, 65), 'M'),
+((175, 78), 'M'),
+((185, 90), 'M'),
+((171, 65), 'W'),
+((155, 48), 'W'),
+((165, 60), 'W'),
+((182, 80), 'M'),
+((175, 69), 'W'),
+((178, 80), 'M'),
+((160, 50), 'W'),
+((170, 72), 'M')}
+
+
+
 def calc_stats(data_dict):
     for cl in data_dict.keys():  # for every class
         for i in range(0, n_dimension):  # for evey feature, ex: age, height, weight etc.
@@ -63,6 +83,7 @@ def formula(d):
             prod *= val
         probability_distributions.append(prod)
 
+    print 'Probability distributions:' + str(probability_distributions)
     return probability_distributions.index(max(probability_distributions))
 
 
@@ -85,10 +106,10 @@ if __name__ == '__main__':
     #  Data is now in  data_dict dictionary in desired format
 
     calc_stats(data_dict)  # Calculate mean and standard deviation for each feature given class - Calculating the priors
-    """
+
     for key in data_stats.keys():
         print key, ' : ', data_stats[key]
-    """
+
     test = (180, 85, 29)
     print 'Final class of this data point is: ' + cl[formula(test)]
 

@@ -16,8 +16,9 @@
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/machine_learning$gaussian_naivebayes.coverage" NAME="gaussian_naivebayes Coverage Results" MODIFIED="1442782129946" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw1" />
-    <SUITE FILE_PATH="coverage/machine_learning$knn.coverage" NAME="knn Coverage Results" MODIFIED="1443070686584" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw1" />
-    <SUITE FILE_PATH="coverage/machine_learning$gaussian_nb.coverage" NAME="gaussian_nb Coverage Results" MODIFIED="1443070621741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw1" />
+    <SUITE FILE_PATH="coverage/machine_learning$knn.coverage" NAME="knn Coverage Results" MODIFIED="1443149533542" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw1" />
+    <SUITE FILE_PATH="coverage/machine_learning$gaussian_nb.coverage" NAME="gaussian_nb Coverage Results" MODIFIED="1443152965379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/hw1" />
+    <SUITE FILE_PATH="coverage/machine_learning$newknn.coverage" NAME="newknn Coverage Results" MODIFIED="1443150965338" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -31,12 +32,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="knn.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="knn.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw1/knn.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5988024" vertical-offset="855" max-vertical-offset="1425">
-              <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
-              <folding />
+            <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1380">
+              <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+              <folding>
+                <element signature="e#90#101#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="newknn.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/newknn.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="744" max-vertical-offset="1350">
+              <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+              <folding>
+                <element signature="e#90#101#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -44,18 +59,18 @@
       <file leaf-file-name="gaussian_naivebayes.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hw1/gaussian_naivebayes.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="660">
+            <state vertical-scroll-proportion="0.0" vertical-offset="159" max-vertical-offset="660">
               <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="gaussian_nb.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="gaussian_nb.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hw1/gaussian_nb.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1074" max-vertical-offset="1575">
-              <caret line="92" column="46" selection-start-line="92" selection-start-column="46" selection-end-line="92" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.28229666" vertical-offset="1412" max-vertical-offset="1890">
+              <caret line="102" column="46" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -77,8 +92,9 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/hw1/gaussian_naivebayes.py" />
-        <option value="$PROJECT_DIR$/hw1/gaussian_nb.py" />
         <option value="$PROJECT_DIR$/hw1/knn.py" />
+        <option value="$PROJECT_DIR$/newknn.py" />
+        <option value="$PROJECT_DIR$/hw1/gaussian_nb.py" />
       </list>
     </option>
   </component>
@@ -165,7 +181,7 @@
       <console-settings />
     </option>
   </component>
-  <component name="RunManager" selected="Python.knn">
+  <component name="RunManager" selected="Python.gaussian_nb">
     <configuration default="false" name="knn" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -218,6 +234,25 @@
       <module name="machine_learning" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hw1/gaussian_nb.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="newknn" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="machine_learning" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/newknn.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -373,16 +408,18 @@
       <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.knn" />
       <item index="1" class="java.lang.String" itemvalue="Python.gaussian_naivebayes" />
       <item index="2" class="java.lang.String" itemvalue="Python.gaussian_nb" />
+      <item index="3" class="java.lang.String" itemvalue="Python.newknn" />
     </list>
     <recent_temporary>
-      <list size="3">
-        <item index="0" class="java.lang.String" itemvalue="Python.knn" />
-        <item index="1" class="java.lang.String" itemvalue="Python.gaussian_nb" />
-        <item index="2" class="java.lang.String" itemvalue="Python.gaussian_naivebayes" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.gaussian_nb" />
+        <item index="1" class="java.lang.String" itemvalue="Python.newknn" />
+        <item index="2" class="java.lang.String" itemvalue="Python.knn" />
+        <item index="3" class="java.lang.String" itemvalue="Python.gaussian_naivebayes" />
       </list>
     </recent_temporary>
   </component>
@@ -411,7 +448,7 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29747677" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40770254" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -451,7 +488,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1440">
           <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="26" />
-          <folding />
+          <folding>
+            <element signature="e#90#101#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -475,7 +514,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="390">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#90#101#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -487,18 +528,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw1/gaussian_nb.py">
+    <entry file="file://$PROJECT_DIR$/hw1/knn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1074" max-vertical-offset="1575">
-          <caret line="92" column="46" selection-start-line="92" selection-start-column="46" selection-end-line="92" selection-end-column="46" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="810" max-vertical-offset="1380">
+          <caret line="75" column="22" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+          <folding>
+            <element signature="e#90#101#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hw1/knn.py">
+    <entry file="file://$PROJECT_DIR$/newknn.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5988024" vertical-offset="855" max-vertical-offset="1425">
-          <caret line="78" column="13" selection-start-line="78" selection-start-column="13" selection-end-line="78" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="744" max-vertical-offset="1350">
+          <caret line="73" column="13" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+          <folding>
+            <element signature="e#90#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hw1/gaussian_nb.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28229666" vertical-offset="1412" max-vertical-offset="1890">
+          <caret line="102" column="46" selection-start-line="102" selection-start-column="46" selection-end-line="102" selection-end-column="46" />
           <folding />
         </state>
       </provider>

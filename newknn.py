@@ -59,23 +59,21 @@ def knearest(k, t1):
         for i in range(0, len(data)):
             dist.append(eucledian_dist(data[i][0], t1))  # Calculates distances from test data to every other point in
             # training data
-        print dist
+        #print dist
         for i in range(0, k):
             min_index, min_value = min(enumerate(dist), key=operator.itemgetter(1))  #returns the index of minimum value
             final_classes.append(data[min_index][1])  # appends the class of least distance value to a list
-            print 'minindex' ,min_index
-            print data[min_index]
+            print data[min_index], 'Distance:' + str(dist[min_index])
             del dist[min_index]
             del data[min_index]
 
 
 if __name__ == '__main__':
-    data = list(three)  # Converting input data 'set' to list
-    print 'Input data: ',  data
+    data = list(two)  # Converting input data 'set' to list
+    #print 'Input data: ',  data
     dist = []
     final_classes = []
-    knearest(3, (180, 85, 29))
-    print 'Cartesian distances from test point ', dist
+    knearest(5, (180, 85))  # Replace new data point here and assign value of k
     print 'Majority of class count from: ', final_classes
     if final_classes.count('M') >= final_classes.count('W'):
         print 'Final class assigned to test data is : M'
